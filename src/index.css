@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+}
+
+@layer components {
+  .heading {
+    @apply text-3xl font-bold text-color-bule;
+  }
+
+  .paragraph {
+    @apply text-base text-color-Cool-gray mb-6;
+  }
+
+  .paragrap_1 {
+    @apply text-base text-color-Cool-gray;
+  }
+
+  .text {
+    @apply text-base font-bold text-color-bule;
+  }
+
+  .label {
+    @apply text-sm font-normal text-color-bule mb-2 cursor-pointer;
+  }
+
+  .input_text {
+    @apply text-base font-medium text-color-bule border-[1px] rounded-md border-color-Cool-gray p-2 mb-5 outline-none focus:border-[1px] focus:border-color-Purplish-blue cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply text-base font-medium bg-color-bule px-4 py-2 rounded-md text-color-White;
+  }
+  .btn-secondary {
+    @apply text-base font-medium text-color-bule px-4 py-2;
+  }
+
+  .btn-position {
+    @apply absolute right-0 bottom-0 translate-y-24;
+  }
+  .card {
+    @apply select-none cursor-pointer bg-color-White border-[1px] w-[120px] h-[150px] rounded-lg px-3 py-4 border-color-Cool-gray flex flex-col justify-between items-start hover:border-color-Purplish-blue;
+  }
+
+  .text_1 {
+    @apply text-sm font-normal text-color-Purplish-blue;
+  }
+
+  .checkbox {
+    @apply appearance-none h-5 w-5 rounded-md border-[1px] border-color-Cool-gray;
+  }
+
+  .checkMark {
+    @apply absolute top-0 left-0 text-xl h-4 w-4 text-opacity-0 transition;
+  }
+
+  .selected {
+    @apply bg-color-Light-blue;
+  }
+}
+
+.checkbox:checked ~ .checkMark {
+  @apply text-opacity-100 bg-color-Purplish-blue;
+  animation: check-anime 0.5s 1;
+}
+
+@keyframes check-anime {
+  0%,
+  100% {
+    @apply transform scale-100;
+  }
+  50% {
+    @apply transform scale-150 opacity-0;
+  }
+}
